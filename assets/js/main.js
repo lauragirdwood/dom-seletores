@@ -27,37 +27,71 @@ textArea.style.background = "red";
 // DOM - Seletores e Atributos #01
 let copy = document.getElementById("copyright");
 console.log(copy.attributes);
+// Jorge:
+//console.log(document.getElementById("copyright").attributes);
 
 // DOM - Seletores e Atributos #02
 let twitter = document.querySelector("a.fa-twitter");
 console.log(twitter.getAttribute("href"));
+// Jorge:
+//console.log(document.querySelector("a.fa-twitter").getAttribute("href"));
 
 // DOM - Seletores e Atributos #03
 let facebook = document.querySelector("a.fa-facebook");
 console.log(facebook.getAttribute("href"));
+//console.log(document.querySelector("a.fa-facebook").getAttribute("href"));
 
 // DOM - Seletores e Atributos #04
 let youtube = document.querySelector("a.fa-youtube");
 youtube.setAttribute("href", "https://www.youtube.com/channel/UCRQdwmWMhTcqDFjPT4UPZYA");
+youtube.setAttribute("target", "_blank");
+// Karine
+// let e = document.querySelectorAll("a");
+// console.log(e[22].getAttribute("href")); 
+// console.log(e[23].getAttribute("href")); 
+// console.log(e[24].setAttribute("href", "https://www.youtube.com/channel/UCRQdwmWMhTcqDFjPT4UPZYA"));
+// Jorge
+// document.querySelector("a.fa-youtube").setAttribute("href", "https://www.youtube.com/channel/UCRQdwmWMhTcqDFjPT4UPZYA");
+
 
 // DOM - Seletores e Atributos #05
 let form = document.querySelector("form");
 console.log(form.hasAttribute("action"));
+// Jorge preferível ser o mais específico possível nos selestores ;)
+// console.log(document.querySelector(".formulario").hasAttribute("action"));
 
 // DOM - Seletores e Atributos #06
-form.setAttribute("action", "https://www.youtube.com/channel/UCRQdwmWMhTcqDFjPT4UPZYA")
+// form.removeAttribute("url");
+// form.setAttribute("action", "http://www.digitalhouse.com")
+// Jorge v01
+// let formulario = document.querySelector(".formulario");
+// let url = formulario.getAttribute("url");
+// formulario.removeAttribute("url");
+// formulario.setAttribute("action", url);
+// Jorge v02
+let formulario = document.querySelector(".formulario");
+formulario.setAttribute("action", formulario.getAttribute("url"));
+formulario.removeAttribute("url");
 
 // DOM - Seletores e Atributos #07
 let vermelhou = document.querySelectorAll("h2");
 for (let i = 0; i < vermelhou.length; i++){
     vermelhou[i].style.color = "red";
 }
+// Jorge
+// document.querySelectorAll("h2").forEach(function(h2){
+//     h2.style.color = "red";
+// });
 
 // DOM - Seletores e Atributos #08
 let amarelou = document.querySelectorAll(".icon");
 for (let i = 0; i < amarelou.length; i++){
     amarelou[i].style.color = "yellow";
 }
+// Jorge
+// document.querySelectorAll(".icon").forEach(function(icon){
+//     icon.style.background = "yellow";
+// })
 
 // Elementos #01
 let topo = document.querySelector("a#top");
