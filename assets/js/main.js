@@ -9,6 +9,7 @@ esconder.style.display = "none";
 // Seletores #02
 let coruja = document.querySelector("#lechuza");
 coruja.style.filter = "grayscale(100%)";
+// Jorge:
 //document.querySelector("#lechuza").style.filter = "grayscale(100%)"
 
 // Seletores #03
@@ -18,6 +19,7 @@ for (let i = 0; i < campos.length; i++) {
 }
 let textArea = document.querySelector("textarea");
 textArea.style.background = "red";
+// Jorge:
 // document.querySelectorAll("input").forEach(function(item){
 //     item.style.background = "red";
 // });
